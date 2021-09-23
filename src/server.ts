@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-app.post("/courses", (request, response) => {
+app.get("/courses", (request, response) => {
     const { name } = request.body;
 
     return response.json(name)
