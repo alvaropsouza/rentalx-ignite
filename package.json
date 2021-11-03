@@ -6,13 +6,16 @@
   "author": "alvaropsouza <alvaropatricio61@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --poll --respawn src/server.ts"
+    "dev": "ts-node-dev --respawn --inspect --ignore-watch node_modules --transpileOnly --poll src/server.ts"
   },
   "dependencies": {
     "csv-parse": "^4.16.3",
     "express": "^4.17.1",
     "multer": "^1.4.3",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.6",
+    "typeorm": "^0.2.38",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
