@@ -6,7 +6,7 @@
   "author": "alvaropsouza <alvaropatricio61@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --inspect --ignore-watch node_modules --transpileOnly --poll src/server.ts"
+    "dev": "ts-node-dev --respawn --inspect --ignore-watch node_modules --transpile-only src/server.ts"
   },
   "dependencies": {
     "csv-parse": "^4.16.3",
