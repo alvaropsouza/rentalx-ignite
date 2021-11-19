@@ -1,3 +1,4 @@
+import { inject, injectable } from "tsyringe";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
 interface IRequest {
@@ -5,8 +6,13 @@ interface IRequest {
   description: string;
 }
 
+// Define classe como injetável
+@injectable()
 class CreateSpecificationUseCase {
-  constructor(private specificationsRepository: ISpecificationsRepository) {}
+  constructor(
+    @inject("SpecificationsRepository")
+    // Injeta as dependencias com base no arquivo que contém o container (Nome tem que ser igual ao que tiver lá)
+    private specificationsRepository: ISpecificationsRepository) {}
 
   execute({ name, description }: IRequest): void {
     const specificationAlreadyExists =
